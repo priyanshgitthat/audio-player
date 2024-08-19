@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="list.css">
+</head>
+
+<body>
+    <div class="mdiv">
+        <h1 class="hmain">Music Player</h1>
+        <span><i class="fas fa-bars" id="toggle-button"></i></span>
+    </div>
+
+    <div class="section">
+        <div class="main">
+            <div class="itm">
+                <h1 id="currentSongName">Song Name</h1>
+                <p id="currentArtistName">Artist name</p>
+                <div class="disk">
+                </div>
+                <div class="slider">
+                    <div class="wrapper">
+                        <input type="range" value="0" min="0" id="slider">
+                    </div>
+                    <span class="cTime">00:00:00</span>
+                    <span class="dTime">00:00:00</span>
+                </div>
+                
+                <div class="controls">
+                    <button id="backward"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="play-pause-button"><i class="fas fa-play"></i></button>
+                    <button id="forward"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <audio id="audioPlayer" controls hidden>
+        Your browser does not support the audio element.
+    </audio>
+    <!-- playlist -->
+   
+
+    <section id="playlist">
+        <!-- <div class="item">
+            <div class="div">
+                <div class="detail">
+                    <h2>Song Name 1</h2>
+                    <p>artist name</p>
+                </div>
+                <button class="btn" id="play-pause-button">
+                    <i class="fas fa-play"></i>
+                </button>
+
+            </div>
+        </div>    -->
+    </section>
+
+   
+
+    <footer>
+        <p>Copyright <i class="fa fa-copyright"></i> all right reserved </p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="songData.js"></script>
+    <script src="music.js"></script>
+</body>
+
+</html>

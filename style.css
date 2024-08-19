@@ -1,0 +1,206 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.section{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(red,black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    border: 2px solid white;
+    min-width: 60%;
+    min-height: 70vh;
+    border-radius: 2rem;
+    box-shadow: 2rem 1rem 2rem rgba(2, 2, 2, 0.596);
+    transition: all .2s ease-in;
+
+    &:hover{
+        box-shadow: 2rem 1rem 2rem rgba(2, 2, 2, 0.87);
+    }
+}
+
+.main .itm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main .itm h1{
+    color: white;
+    font-size: 3rem;
+    margin: 1rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+
+}
+
+.itm p{
+    color: white;
+    font-size: 1.5rem;
+    margin: -1rem 0 .1rem 0;
+    text-transform: capitalize;
+}
+
+.disk {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 1rem 0;
+    background-image: url("images/demo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.5s linear; /* Smooth transition */
+}
+
+.disk::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5rem;
+    width: 5rem;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Keyframe animation for rotation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.slider{
+    position: relative;
+    width: 70%;
+}
+.wrapper{
+    width: 100%;
+    /* background-color: red; */
+}
+
+.wrapper input{
+    width: 100%;
+    -webkit-appearance: none;
+    height: .2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    overflow: hidden;
+    background-color: red;
+}
+
+.wrapper input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 5px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -40rem 0 0 40rem rgb(2, 2, 2);
+}
+
+.slider span{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+.slider .cTime{
+    position: absolute;
+    left: 0;
+}
+
+.slider .dTime{
+    position: absolute;
+    right: 0;
+}
+
+.controls{
+    margin: 6rem 0;
+}
+
+.controls button{
+    width: 3rem;
+    height: 3rem;
+    margin: 0 2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2.5rem;
+    color: white;
+    transition: all .2s ease-in;
+
+    &:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+
+footer{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    bottom: 0px;
+    background-color: grey;
+}
+
+footer p{
+    color: white;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+@media  only screen and (max-width:580px) {
+
+    html{
+        font-size: 8.2px;
+    }
+
+    .main{
+    width: 100%;
+    min-height: 100vh;
+    border: none;
+    }
+
+    .itm{
+        padding: 9rem 0 0 0;
+    }
+
+
+    footer p{
+        font-size: 1rem;
+    }
+
+    .controls button{
+        margin: 0 2rem;
+    }
+
+    .audio{
+        width: 100%;
+    }
+}
